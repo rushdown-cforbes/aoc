@@ -20,7 +20,7 @@ var numbers = map[string]string{
 }
 
 func main() {
-	fileB, err := os.ReadFile("b/input.txt")
+	fileB, err := os.ReadFile("input.txt")
 	if err != nil {
 		log.Fatal(err)
 	}
