@@ -26,18 +26,15 @@ func main() {
 	}
 
 	total := 0
-	lines := 0
 	var firstDigit, lastDigit string
 	for index, v := range fileB {
 		c := string(v)
 		if c == "\n" {
-			lines++
 			if lastDigit == "" {
 				lastDigit = firstDigit
 			}
 			num, err := strconv.Atoi(firstDigit + lastDigit)
 			if err == nil {
-				log.Println(num)
 				total += num
 				firstDigit = ""
 				lastDigit = ""
@@ -63,7 +60,6 @@ func main() {
 		}
 	}
 	log.Println(total)
-	log.Println(lines)
 }
 
 func checkNumber(b []byte, i int) (string, bool) {
